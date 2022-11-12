@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CUPIDEAF</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+</head>
+<body>
+    <div class="full-page">
+        
+        <div class="navbar">
+            <div>
+                <p>CUPIDEAF</p>
+            </div>
+            
+            <nav>
+                <ul id='MenuItems'>
+                    <li><button class="home" id="hme" onclick="document.getElementById('login-form').style.display='none'; document.getElementById('img-1').style.display='block'"><b> Home </b></button></li>
+                    
+                    
+                    
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'; document.getElementById('img-1').style.display='none'" style="width:auto;"> <b> Account </b></button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='Email Id' required >
+		    <input type='password'class='input-field'placeholder='Enter Password' required>
+		    <input type='checkbox'class='check-box'><span>Remember Password</span>
+		    <button type='submit'class='submit-btn'>Log in</button>
+		 </form>
+		 <form id='register' class='input-group-register'>
+		     <input type='text'class='input-field'placeholder='First Name' required>
+		     <input type='text'class='input-field'placeholder='Last Name ' required>
+		     <input type='email'class='input-field'placeholder='Email Id' required>
+		     <input type='password'class='input-field'placeholder='Enter Password' required>
+		     <input type='password'class='input-field'placeholder='Confirm Password'  required>
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit'class='submit-btn'>Register</button>
+	         </form>
+            </div>
+            
+        
+        </div>
+        <div class="img" id="img-1" >
+            <img src="bg-1.png">
+        </div>
+        <div id="hd">
+            <h1 id="hd1">REAL-TIME COMMUNICATION SYSTEM POWERED BY AI FOR SPECIALLY ABLED</h1>
+            <br>
+            <h4 id="hd2">&emsp;&emsp;HEAVEN IS NEVER LOST WHEN HIS HEART IS SPEECHLESS</h4>
+            <br>
+            <p id="p1">
+                &emsp;In our society, we have people with disabilities. The technology is developing day by day but no significant developments 
+                are undertaken for the betterment of these people. Communications between deaf-mute and a normal person has always been 
+                a challenging task. It is very difficult for mute people to convey their message to normal people. Since normal people 
+                are not trained on hand sign language. In emergency times conveying their message is very difficult. The human hand has 
+                remained a popular choice to convey information in situations where other forms like speech cannot be used. 
+                Voice Conversion System with Hand Gesture Recognition and translation will be very useful to have a proper conversation 
+                between a normal person and an impaired person in any language.
+
+            </p>
+
+        
+        </div>
+        
+        
+        
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+                document.getElementById('img-1').style.display='block';
+            }
+        }
+    </script>
+</body>
+</html>
